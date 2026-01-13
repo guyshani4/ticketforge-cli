@@ -27,7 +27,8 @@ Throughout the development, I performed deep inspection of network traffic:
 During the reverse engineering process, I identified a discrepancy between browser-based requests and CLI-based requests. While the browser successfully fetches data from /api/mine, the server implementation for this specific assignment deployment appears to enforce strict header validation or use React Server Components (RSC) that return HTML/404 when browser-specific headers are missing. To address this, I implemented a robust header emulation strategy and a fallback mechanism to test multiple inferred endpoints discovered via the Network tab.
 
 ## AI Disclosure
-I used Gemini (AI) to assist with:
-- Analyzing 401 Unauthorized errors and locating Basic Auth tokens.
-- Debugging 404 Routing issues in a Next.js environment.
-- Structuring the Python CLI boilerplate and requirements.
+I utilized AI tools (Gemini/ChatGPT) to assist with the following:
+- **Reverse Engineering**: Decoding the 401 Unauthorized error to identify the Basic Auth requirement.
+- **Network Analysis**: Interpreting Chrome DevTools Network traffic to locate potential API endpoints and understand RSC (React Server Components) headers.
+- **Code Architecture**: Structuring the Python CLI boilerplate, including the configuration setup and error handling logic.
+- **Learning**: Since this was my first integration project of this type, I used AI as a learning partner to quickly grasp concepts like Base64 encoding and HTTP header emulation.
